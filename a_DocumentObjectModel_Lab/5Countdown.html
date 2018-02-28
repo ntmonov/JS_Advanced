@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<input type="text" id="time" style="border:3px solid blue; text-align:center; font-size:2em;" disabled="true"/>
+<script>window.onload = function() { countdown(600); }
+    function countdown(seconds) {
+        let box = $('#time');
+        setInterval(thick, 1000);
+        function thick() {
+            seconds--;
+            let time = Math.floor(seconds / 60) + ":" + ("0" + seconds % 60).slice(-2);
+            box.val(time);
+        }
+    }
+</script>
+</body>
+</html>

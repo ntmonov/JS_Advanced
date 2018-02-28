@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<table>
+    <tbody>
+    <tr><th>Product</th><th>Cost</th></tr>
+    <tr><td>Beer</td>   <td>2.88</td></tr>
+    <tr><td>Fries</td>  <td>2.15</td></tr>
+    <tr><td>Burger</td> <td>4.59</td></tr>
+    <tr><td>Total:</td> <td id="sum"></td></tr>
+    </tbody>
+</table>
+<button onclick="sum()">Sum</button>
+<script>
+    function sum() {
+        let td = $('table td');
+        let sum = 0;
+        for (let i = 1; i < td.length - 2; i+=2) {
+            sum += Number($(td[i]).text());
+        }
+        $('#sum').text(sum);
+    }
+</script>
+</body>
+</html>
