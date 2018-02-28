@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<h1>List of Items</h1>
+<ul id="items"><li>First</li><li>Second</li></ul>
+<input type="text" id="newItemText" />
+<input type="button" value="Add" onclick="addItem()">
+<script>
+    function addItem() {
+        let item = $('#newItemText');
+        let li = $('<li>');
+        li.text(item.val());
+        $('#items').append(li);
+        item.val('');
+    }
+</script>
+</body>
+</html>
