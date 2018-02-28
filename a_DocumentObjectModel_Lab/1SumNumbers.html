@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<input type="text" id="num1"/> +
+<input type="text" id="num2"/> =
+<input type="text" id="sum" readonly="readonly"/>
+<input type="button" value="Calc" onclick="calc()"/>
+<script>
+    function calc() {
+        let num1Field = $('#num1');
+        let num2Field = $('#num2');
+        let sum = Number(num1Field.val()) + Number(num2Field.val());
+        $('#sum').val(sum);
+        num1Field.val('');
+        num2Field.val('');
+    }
+</script>
+</body>
+</html>
